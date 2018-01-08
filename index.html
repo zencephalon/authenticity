@@ -1,0 +1,129 @@
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    function shuffle(a) {
+      var j, x, i;
+      for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+      }
+    }
+    var questions = [
+    "What are you most afraid to desire?",
+    "Why do you do what you do?",
+    "Where do you find yourself most vulnerable?",
+    "What is your deepest shame?",
+    "What do you do that is not socially acceptable?",
+    "What is one experience you’ve had that you don’t believe anyone else has ever experienced before?",
+    "What is a belief you would be willing to die for?",
+    "What would it look like if you peeled away your mask?",
+    "What would be the most difficult decision you’ve ever made?",
+    "If today were the last day of your life, would you do what you are about to do today? If not, what would you do instead?",
+    "What is something you would happily fail at?",
+    "When do you feel you can surrender yourself completely?",
+    "What worries you most about the future?",
+    "What are you holding onto that you need to let go of?",
+    "What is your self-talk like?",
+    "What is the biggest mistake you have ever made?",
+    "Why do you matter?",
+    "Are you happy with yourself?",
+    "What is the time when you were most afraid? Heartbroken? Lonely?",
+    "What is something that you pretend to understand when you really don’t?",
+    "What’s the number one change you need to make in your life in the next twelve months?",
+    "When did you not speak up when you should have?",
+    "In what way are you your own worst enemy?",
+    "What life do you think you are worth?",
+    "What do you wish you didn’t know?",
+    "What have you given up on?",
+    "What mistake do you make over and over again?",
+    "What is the biggest thing that has been draining your happiness?",
+    "What has your inner voice been telling you lately?",
+    "What is worse than death to you?",
+    "What do you hate being judged for?",
+    "What do you wish you could erase from the past?",
+    "When was a time where you took someone for granted and you wish you hadn’t?",
+    "In what way are you stronger than you look?",
+    "What do people thank you for most often?",
+    "What is always worth the wait?",
+    "What makes your life worth living?",
+    "What do you love most about your life?",
+    "In what way do you need a second chance?",
+    "What in life frustrates you the most?",
+    "What is the best piece of advice you’ve ever gotten?",
+    "In what way are you above average?",
+    "What kind of love do you believe you deserve?",
+    "How do you show someone you love them?",
+    "How do you define love?",
+    "How do you define poverty?",
+    "How do you define illness?",
+    "What is the biggest lie you have told yourself?",
+    "What is the biggest lie you have ever told someone?",
+    "If you had $100 million in the bank, what would your day look like?",
+    "What kind of negativity do you struggle to defend yourself against?",
+    "What helps you persevere when you feel like giving up?",
+    "What is a belief that has slowed you down and held you back in life?",
+    "Describe a situation that had been stealing your happiness.",
+    "What would you most like to forgive, but can’t allow yourself to?",
+    "Where is the one place in the world that you like to escape to?",
+    "What is your response to someone says they hate you?",
+    "What do you wish people could understand about you?",
+    "What do you most apologize for?",
+    "What are you dealing with right now?",
+    "How would you define loneliness?",
+    "What seems the most real to you?",
+    "What is one thing that is unique and true about you?",
+    "What is the biggest risk you have ever taken in your life?",
+    "What gives you a reason to smile?",
+    "What is something your mom once said that you will never forget?",
+    "What should you never do to yourself?",
+    "What is something interesting about you that almost no one knows?",
+    "What are you most proud of yourself for?",
+    "What is the best compliment someone can give you?",
+    "What is the most valuable thing you have ever lost?",
+    "When do you think about what you are thinking about?",
+    "What could you always use more of?",
+    "What do you wish you did sooner?",
+    "What are you most afraid to talk about? Why?",
+    "What disappoints you the most about life?",
+    "What is your back-up plan if the unthinkable happens?",
+    "If you were only allowed to keep one memory with you for the rest of your life, what would it be?",
+    "What’s something that you’re glad you’ll never have to do again?",
+    "When do you lose yourself in what you are doing?",
+    "What is one thing that changes people?",
+    "What would your version of hell look like?",
+    "What would your version of heaven look like?",
+    "What has been the worst struggle in your life?",
+    "What does your inner child want?",
+    "What is something you would love to do so much that you would be okay with failing at.",
+    "What are you uncertain about?",
+    "What are your best techniques for making someone smile?",
+    "What is the nicest thing you have done for a complete stranger?",
+    "Where are you playing small in your life right now?",
+    "What is something where you have a hard time asking for help?",
+    "How did you feel the last time you were completely alone?",
+    "What made you cry last?",
+    "Where in the world are you the happiest?",
+    "Where in the world are you the saddest?",
+    "When have you physically/emotionally felt weak?",
+    "Do you feel that you have already reached your peak?",
+    "What are you doing when you feel most alive?",
+    "Who are you surrounded by when you feel most at peace?",
+    "What can make you laugh so hard you cry?"
+    ];
+    shuffle(questions);
+
+    var counter = 0;
+
+    function nextQuestion() {
+      $('#question-display').text(questions[counter]);
+      counter += 1;
+    }
+  </script>
+  <body style="text-align: center">
+    <h1>Questions to Spark Authenticity</h1>
+    <h2 id="question-display">In no particular order, click to begin...</h2>
+    <button id="next-question" onclick="nextQuestion()" style="width: 20em; height: 10em">Next Question</button>
+  </body>
+</html>
